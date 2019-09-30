@@ -40,6 +40,11 @@
 	export default {
 		components:{
 			Panel,
+		},
+		data() {
+			return {
+				active:0
+			}
 		}
 	}
 </script>
