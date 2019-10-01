@@ -1,10 +1,11 @@
 <template lang="html">
     <div>
-        <Heador/>
+        <Heador cname='iousHeader'/>
         <Slider/>
         <Welfare />
         <Service />
-        <Footor />
+        <Login />
+        <!-- <Footor /> -->
         <Navbar/>
     </div>
 </template>
@@ -16,6 +17,7 @@ import Navbar from "../public/navbar.vue"
 import Slider from "./islider.vue"
 import Welfare from './welfare.vue'
 import Service from "./service.vue"
+import Login from "./login.vue"
 export default {
     components: {
         Heador,
@@ -23,7 +25,14 @@ export default {
         Footor,
         Navbar,
         Welfare,
-        Service
+        Service,
+        Login
     },
 }
 </script>
+
+<style>
+    .iousHeader{
+        display: none;
+    }
+</style>

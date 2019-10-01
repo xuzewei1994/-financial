@@ -1,6 +1,6 @@
 <template>
-  <div id="app" v-else>
-    <router-view/>
+  <div id="app">
+    <router-view />
   </div>
 </template>
 

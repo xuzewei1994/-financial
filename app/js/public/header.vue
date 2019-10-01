@@ -1,5 +1,5 @@
 <template lang="html">
-	<div :class="$style.header">
+	<div :class="[$style.header,cname]">
 		<span :class="$style.left">
 			<em>注册</em>&nbsp;|&nbsp;<em>登录</em>
 		</span>
@@ -13,11 +13,20 @@ export default {
 	components: {
 		btn,
 	},
+	props:{
+		cname:{
+			type:String,
+			default:''
+		},
+	},
 }
 </script>
 
 <style lang="scss" module>
   .header{
+  	position:relative;
+  	top: 0px;
+	left: 0px;
 	color: #666;
 	height: 100px;
 	line-height: 100px;
@@ -26,7 +35,7 @@ export default {
 	left: 0;
 	right: 0;
 	font-size: 32px;
-	background: #fff url(//m.jr.jd.com/spe/qyy/main/images/jr-logo.png) center center no-repeat;
+	background: #fff url(https://www.xcjr.com/public/images/wechat_vs1/img/logo-big.jpg) center center no-repeat;
 	background-size: auto 50%;
 	z-index: 100;
 	.left{
@@ -34,6 +43,13 @@ export default {
 	  height: 30px;
 	  line-height: 30px;
 	  margin: 17px 0 0 18px;
+	}
+	img{
+		position: absolute;
+		top: 15px;
+		left: 250px;
+		width: 150px;
+		height: 70px;
 	}
 	.btnDownload{
 	  float: right;
@@ -46,6 +62,5 @@ export default {
 	  border-radius: 4px;
 	  margin: 28px 24px 0 0;
 	}
-
   }
 </style>

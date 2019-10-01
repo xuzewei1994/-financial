@@ -51,16 +51,21 @@ export default {
   @import "../../css/element.scss";
   .panel{
     @include panel;
+    >h4{
+        display: none;
+    }
     .content{
       @include flex(row);
       .item{
-        width: 160px;
-        height: 144px;
+        box-sizing: border-box;
+        border: 1px solid rgba(218, 226, 242, 0.8);
+        width: 25%;
+        height: 172px;
         text-align: center;
-        margin-bottom: 40px;
         img{
-          width: 90px;
-          height: 90px;
+            margin-top: 20px;
+            width: 90px;
+            height: 90px;
         }
         p{
           font-size: 26px;

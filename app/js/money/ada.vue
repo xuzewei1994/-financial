@@ -1,7 +1,7 @@
 <template lang="html">
 	<Panel title="神卷满" :class="$style.panel">
 		<section :class="$style.content">
-			<img src="//img12.360buyimg.com/jrpmobile/jfs/t5842/235/8356236245/38364/2112fd7e/597a95d4Ne01da140.png?width=750&height=270" alt="">
+			<img src="//www.xcjr.com/oss/image/bb48426a113f4f05821c2257ff5fe453.png" alt="">
 		</section>
 	</Panel>   
 </template>

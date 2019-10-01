@@ -1,10 +1,11 @@
 <template lang="html">
     <div>
-        <Heador/>
+        <Heador cname='raiseHeader'/>
+        <Ada />
         <Slider/>
         <Daily />
         <In />
-        <More />
+        <!-- <More /> -->
         <Footor cname="mfooter"/>
         <Navbar/>
     </div>
@@ -14,6 +15,7 @@
 import Heador from "../public/header.vue"
 import Footor from "../public/footer.vue"
 import Navbar from "../public/navbar.vue"
+import Ada from "./ada.vue"
 import Slider from "./rslider.vue"
 import Daily from "./daily.vue"
 import In from "./in.vue"
@@ -21,6 +23,7 @@ import More from "./more.vue"
 export default {
     components: {
         Heador,
+        Ada,
         Slider,
         Daily,
         In,
@@ -33,12 +36,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .mfooter{
-    margin-top: 0!important;
-    ul{
-      li:first-child{
-        display: none;
-      }
-    }
+  .raiseHeader{
+    display: none;
   }
 </style>

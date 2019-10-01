@@ -1,5 +1,5 @@
 <template lang="html">
-    <Panel title="In货推荐" :class="$style.panel">
+    <Panel title="每日精选" :class="$style.panel">
         <section :class="$style.content">
             <div :class="$style.item" v-for="item in items" :key="item.catory">
                 <img :src="item.catory" alt="">

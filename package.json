@@ -1,5 +1,5 @@
 {
-  "name": "JDFinance",
+  "name": "Finance",
   "version": "1.0.0",
   "description": "component with vue 2.5 and es6",
   "main": "index.js",
@@ -9,15 +9,11 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --env.production"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/imooc/vuejs.git"
-  },
   "keywords": [
     "es6",
     "component"
   ],
-  "author": "cuc_ygh@163.com",
+  "author": "xuzewei1994@163.com",
   "license": "MIT",
   "eslintConfig": {
     "root": true,
@@ -92,7 +88,11 @@
     "eslint-config-mysticatea": "^12.0.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-vue": "^4.1.0",
+    "file-loader": "^4.2.0",
+    "font-awesome": "^4.7.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "vue-eslint-parser": "^2.0.1-beta.2"
+    "url-loader": "^2.1.0",
+    "vue-eslint-parser": "^2.0.1-beta.2",
+    "webpack-cli": "^3.3.9"
   }
 }

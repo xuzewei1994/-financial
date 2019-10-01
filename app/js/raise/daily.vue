@@ -1,42 +1,68 @@
 <template lang="html">
-    <Panel title="每日签到" :class="$style.panel">
-        <section :class="$style.content">
-            <img src="//img12.360buyimg.com/jrpmobile/jfs/t3184/283/6032981290/37056/fa30c674/589bd5a2Nabdbbbd9.jpg?width=376&height=160" alt="">
-            <img src="//img12.360buyimg.com/jrpmobile/jfs/t3298/196/6130416421/33755/a0536d3e/589bd5d4Nf32e7adc.jpg?width=374&height=160" alt="">
-            <p>不抢白不抢</p>
+    <article class="">
+        <section :class="$style.list">
+            <div :class="$style.item" v-for="item in enters" :key="item.img">
+                <router-link :to="{ name: item.href}">
+                    <img :src="item.img" :alt="item.title">
+                    <h4>{{ item.title }}</h4>
+                </router-link>
+            </div>
         </section>
-    </Panel>
+    </article>
 </template>
 
 <script>
-import Panel from "../core/panel.vue"
+import Slider from "../core/slider.vue"
 export default {
     components: {
-        Panel,
+        Slider,
+    },
+    data() {
+        return {
+            enters: [{
+                href: "download",
+                img: "//www.xcjr.com/public/images/wechat_vs1/image/home-centerNav-new01.png",
+                title: "兑换记录",
+            }, {
+                href: "download",
+                img: "//www.xcjr.com/public/images/wechat_vs1/image/home-centerNav-new02.png",
+                title: "积分抽奖",
+            }, {
+                href: "download",
+                img: "//www.xcjr.com/public/images/wechat_vs1/image/home-centerNav-new03.png",
+                title: "签到",
+            }, {
+                href: "download",
+                img: "//www.xcjr.com/public/images/wechat_vs1/image/home-centerNav-new04.png",
+                title: "积分规则",
+            }],
+        }
     },
 }
 </script>
 
 <style lang="scss" module>
   @import "../../css/element.scss";
-  .panel{
-    @include panel;
-    .content{
-      @include flex(row);
-      position: relative;
-      padding-bottom: 40px;
+  .list{
+    @include list(row);
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    a{
+      text-decoration: none;
+    }
+    .item{
+      text-align: center;
       img{
-        width: 320px;
-        height: 136px;
+        display: inline-block;
+        width: 90px;
+        height: 90px;
       }
-      p{
-        position: absolute;
-        top:-112px;
-        right: 20px;
-        font-size: 24px;
-        color: #999;
-        height: 112px;
-        line-height: 112px;
+      h4{
+        font-size: 26px;
+        margin-top: 12px;
+        color: #666;
       }
     }
   }
